@@ -36,13 +36,13 @@ const initialNodes = [
     id: 'switch',
     type: 'imageNode',
     position: { x: 250, y: 200 },
-    data: { imgSrc: '/images/switch.png', alt: 'Switch', width: 300 },
+    data: { imgSrc: '/images/switch.png', alt: 'Switch', width: 100 },
   },
   {
     id: 'apd',
     type: 'imageNode',
     position: { x: 100, y: 50 },
-    data: { imgSrc: '/images/apd.jpg', alt: 'APD', width: 50 },
+    data: { imgSrc: '/images/apd.jpg', alt: 'APD', width: 100 },
   },
   {
     id: 'laptop',
@@ -96,7 +96,7 @@ export default function App() {
   );
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <div style={{ width: '90vw', height: '100vh' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
