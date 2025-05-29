@@ -33,6 +33,12 @@ const nodeTypes = {
 
 const initialNodes = [
   {
+    id: 'internet',
+    type: 'imageNode',
+    position: { x: 950, y: 350 },
+    data: { imgSrc: '/images/internet.jpg', alt: 'Switch', width: 100 },
+  },
+  {
     id: 'switch',
     type: 'imageNode',
     position: { x: 250, y: 200 },
@@ -77,6 +83,7 @@ const initialNodes = [
 ];
 
 const initialEdges = [
+  { id: 'e0', source: 'switch', target: 'internet', animated: true },
   { id: 'e1', source: 'apd', target: 'switch', animated: true },
   { id: 'e2', source: 'pc', target: 'switch', animated: true },
   { id: 'e3', source: 'laptop', target: 'switch', animated: true },
@@ -103,7 +110,7 @@ export default function App() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        nodeTypes={nodeTypes} // ✅ Register custom node types here
+        nodeTypes={nodeTypes}
         fitView
       >
         <Controls />
